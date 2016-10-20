@@ -1,5 +1,6 @@
 package com.sjtu.Controllers;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -14,11 +15,10 @@ public class controller {
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public @ResponseBody String AuthController(String signature, String timestamp, String nonce, String echostr){
-//        if(new String(DigestUtils.sha1(nonce + timestamp + token))==signature)
-//            return echostr;
-//        else
-//            return "failed";
-        return "haha";
+        if(new String(DigestUtils.sha1(nonce + timestamp + token))==signature)
+            return echostr;
+        else
+            return "failed";
     }
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
