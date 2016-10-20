@@ -20,4 +20,9 @@ public class controller {
         else
             return "failed";
     }
+
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    public @ResponseBody String HelloController(){
+        return "Hello World!";
+    }
 }
