@@ -1,2 +1,2 @@
-utils/Application.class
-controller/controller.class
+com/sjtu/Application.class
+com/sjtu/Controllers/controller.class
