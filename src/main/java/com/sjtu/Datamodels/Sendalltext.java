@@ -4,7 +4,7 @@ package com.sjtu.Datamodels;
  * Created by sunhaoran on 2016/10/21.
  */
 public class Sendalltext {
-    private Sendalltext_filter filter;
+    private Sendalltext_filter filter = new Sendalltext_filter();
 
     private Sendalltext_text text;
 
